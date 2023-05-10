@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Фильмотека</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="../Фильмотека/style.css">
+</head>
+<body>
+
+    <header class="header">
+            <div class="container">
+                <div class="header__top">
+                <div class="logo">
+                    <a href="#">
+                    <img src="../Фильмотека/Picture/LogoFilm.png" alt="" class="LogoPhoto">
+                    </a>
+                </div>
+      
+                <nav class="menu">
+                    <div class="menu__btn">
+                    <span></span>
+                    </div>
+                    <ul class="menu__list">
+                    <li><a href="Mediateka.html">Фильмотека</a></li>
+                    <li><a href="index.html">Онлайн-каталог</a></li>
+                    <li><a href="createFilm.html">Добавить фильм</a></li>
+                    </ul>
+                </nav>
+
+                <div class="buttonGroup">
+                    <div class="btn">
+                        <a class="text" href="#">Войти</a>
+                    </div>
+
+                    <div class="btn">
+                        <a class="text" href="#">Зарегестрироваться</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </header>
+    <br>
+    <div id="filter">
+        <label class="label-text-filter">
+            Страна
+            <select id="country-filter" class="value-filter" onchange="">
+            </select>
+        </label>
+        <label class="label-text-filter">
+            Жанр
+            <select id="genre-filter" class="value-filter">
+            </select>
+        </label>
+        <label class="label-text-filter">
+            Дата выхода с
+            <input type="date" id="yearFrom-filter" class="value-filter">
+            по
+            <input type="date" id="yearTo-filter" class="value-filter">
+        </label>
+        <button class="filter__btn" onclick="offlineCatalog.renderCatalogByFilter()">Найти</button>
+    </div>
+
+
+    <div id="catalog"></div>
+    <div id="comment"></div>
+    <div id="newcomment"></div>
+    <div id="add-film"></div>
+
+    
+    <!--Filter-->
+    <script src="../Фильмотека/component/filter/filter.js"></script>
+    <link rel="stylesheet" href="../Фильмотека/component/filter/filter.css">
+
+    <!--Catalog-->
+    <script src="../Фильмотека/component/catalog/offlineCatalog.js"></script>
+    <link rel="stylesheet" href="../Фильмотека/component/catalog/catalog.css">
+
+    <!--Comment-->
+    <script src="../Фильмотека/component/comment/comment.js"></script>
+    <link rel="stylesheet" href="../Фильмотека/component/comment/comment.css">
+</body>
+</html>
